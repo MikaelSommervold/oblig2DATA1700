@@ -1,6 +1,7 @@
 package oblig2.java.files;
 
 public class Ticket {
+    private long id;
     private String film;
     private int antall;
     private String fornavn;
