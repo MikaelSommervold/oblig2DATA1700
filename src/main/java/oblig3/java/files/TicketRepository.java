@@ -1,4 +1,4 @@
-package oblig2.java.files;
+package oblig3.java.files;
 
         import org.slf4j.Logger;
         import org.slf4j.LoggerFactory;

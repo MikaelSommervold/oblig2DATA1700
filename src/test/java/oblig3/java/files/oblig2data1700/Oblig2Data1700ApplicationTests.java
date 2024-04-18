@@ -1,4 +1,4 @@
-package oblig2.java.files.oblig2data1700;
+package oblig3.java.files.oblig2data1700;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

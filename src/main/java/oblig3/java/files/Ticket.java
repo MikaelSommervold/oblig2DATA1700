@@ -1,4 +1,4 @@
-package oblig2.java.files;
+package oblig3.java.files;
 
 public class Ticket {
     private long id;

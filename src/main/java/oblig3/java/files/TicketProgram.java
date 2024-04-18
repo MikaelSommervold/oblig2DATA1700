@@ -1,4 +1,4 @@
-package oblig2.java.files;
+package oblig3.java.files;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
