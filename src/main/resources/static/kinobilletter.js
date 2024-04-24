@@ -31,17 +31,16 @@ function hentAlle() {
     });
 }
 
-function formatTickets(billetter) {
+function formatTickets(tickets) {
     let output = "<table><tr><th>Etternavn</th><th>Fornavn</th><th>Film</th>" +
         "<th>Antall</th><th>Telefonnummer</th><th>Epost</th></tr>";
-    for (const ticket of billetter) {
+    for (const ticket of tickets) {
         output += "<tr><td>" + ticket.etternavn + "</td><td>" + ticket.fornavn + "</td><td>" + ticket.film + "</td>" +
             "<td>" + ticket.antall + "</td><td>" + ticket.telefon + "</td><td>" + ticket.epost + "</td></tr>";
     }
     output += "</table>";
     $("#ticketsContainer").html(output);
 }
-
 function slettAlle() {
     $.get("/slettAlle", function () {
         hentAlle();
