@@ -31,8 +31,7 @@ public class TicketRepository {
     public List<Ticket> hentAlle() {
         String sql = "SELECT film, antall, fornavn, etternavn, telefon, epost FROM Ticket ORDER BY etternavn";
         try {
-            List<Ticket> tickets = db.query(sql, new BeanPropertyRowMapper(Ticket.class));
-            return tickets;
+            return db.query(sql, new BeanPropertyRowMapper<>(Ticket.class));
         } catch (Exception e) {
             logger.error("Kunne ikke hente billetter " + e);
             return null;

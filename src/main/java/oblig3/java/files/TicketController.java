@@ -14,7 +14,7 @@ public class TicketController {
 
     @PostMapping("/lagre")
     public void lagreBillett(Ticket ticket) {
-        rep.lagreBillett(billetter);
+        rep.lagreBillett(ticket);
     }
 
     @GetMapping("/hentAlle")

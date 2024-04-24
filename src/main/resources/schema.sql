@@ -5,5 +5,5 @@ CREATE TABLE IF NOT EXISTS `Ticket` (
 `fornavn` VARCHAR(255) NOT NULL,
 `etternavn` VARCHAR(255) NOT NULL,
 `telefon` VARCHAR(255) NOT NULL,
-`epost` VARCHAR(255) NOT NULL,
+`epost` VARCHAR(255) NOT NULL
 );

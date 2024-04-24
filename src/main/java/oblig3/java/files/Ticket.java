@@ -9,6 +9,10 @@ public class Ticket {
     private String telefon;
     private String epost;
 
+    public Ticket() {
+        // Default constructor
+    }
+
     public Ticket(String film, int antall, String fornavn, String etternavn, String telefon, String epost) {
         this.film = film;
         this.antall = antall;
