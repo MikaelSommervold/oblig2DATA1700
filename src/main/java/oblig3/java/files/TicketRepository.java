@@ -22,8 +22,9 @@ public class TicketRepository {
         try {
             db.update(sql, ticket.getEtternavn(), ticket.getFornavn(), ticket.getFilm(), ticket.getAntall(), ticket.getTelefon(), ticket.getEpost());
             return true;
-        } catch (Exception e) {
-            logger.error("Kunne ikke lagre billett " + e);
+        }
+        catch (Exception e) {
+            logger.error("Kunne ikke lagre billett " +e);
             return false;
         }
     }
@@ -33,7 +34,7 @@ public class TicketRepository {
         try {
             return db.query(sql, new BeanPropertyRowMapper<>(Ticket.class));
         } catch (Exception e) {
-            logger.error("Kunne ikke hente billetter " + e);
+            logger.error("Kunne ikke hente billetter " +e);
             return null;
         }
     }
@@ -44,7 +45,7 @@ public class TicketRepository {
             db.update(sql);
             return true;
         } catch (Exception e) {
-            logger.error("Kunne ikke slette billetter " + e);
+            logger.error("Kunne ikke slette billetter " +e);
             return false;
         }
     }
