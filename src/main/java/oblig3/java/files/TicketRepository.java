@@ -18,9 +18,9 @@ public class TicketRepository {
     private Logger logger = LoggerFactory.getLogger(TicketRepository.class);
 
     public boolean lagreBillett(Ticket ticket) {
-        String sql = "INSERT INTO Ticket(film, antall, fornavn, etternavn, telefon, epost) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Ticket(etternavn, fornavn, film, antall, telefon, epost) VALUES (?, ?, ?, ?, ?, ?)";
         try {
-            db.update(sql, ticket.getFilm(), ticket.getAntall(), ticket.getFornavn(), ticket.getEtternavn(), ticket.getTelefon(), ticket.getEpost());
+            db.update(sql, ticket.getEtternavn(), ticket.getFornavn(), ticket.getFilm(), ticket.getAntall(), ticket.getTelefon(), ticket.getEpost());
             return true;
         } catch (Exception e) {
             logger.error("Kunne ikke lagre billett " + e);
@@ -29,7 +29,7 @@ public class TicketRepository {
     }
 
     public List<Ticket> hentAlle() {
-        String sql = "SELECT film, antall, fornavn, etternavn, telefon, epost FROM Ticket ORDER BY etternavn";
+        String sql = "SELECT etternavn, fornavn, film, antall, telefon, epost FROM Ticket ORDER BY etternavn";
         try {
             return db.query(sql, new BeanPropertyRowMapper<>(Ticket.class));
         } catch (Exception e) {

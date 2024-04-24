@@ -1,9 +1,9 @@
 function formSubmit() {
     const billetter = {
+        etternavn: $("#etternavn").val(),
+        fornavn: $("#fornavn").val(),
         film: $("#film").val(),
         antall: $("#antall").val(),
-        fornavn: $("#fornavn").val(),
-        etternavn: $("#etternavn").val(),
         telefon: $("#telefon").val(),
         epost: $("#epost").val(),
     };
@@ -32,11 +32,11 @@ function hentAlle() {
 }
 
 function formatTickets(billetter) {
-    let output = "<table><tr><th>Film</th><th>Antall</th><th>Fornavn</th>" +
-        "<th>Etternavn</th><th>Telefonnummer</th><th>Epost</th></tr>";
+    let output = "<table><tr><th>Etternavn</th><th>Fornavn</th><th>Film</th>" +
+        "<th>Antall</th><th>Telefonnummer</th><th>Epost</th></tr>";
     for (const ticket of billetter) {
-        output += "<tr><td>" + ticket.film + "</td><td>" + ticket.antall + "</td><td>" + ticket.fornavn + "</td>" +
-            "<td>" + ticket.etternavn + "</td><td>" + ticket.telefon + "</td><td>" + ticket.epost + "</td></tr>";
+        output += "<tr><td>" + ticket.etternavn + "</td><td>" + ticket.fornavn + "</td><td>" + ticket.film + "</td>" +
+            "<td>" + ticket.antall + "</td><td>" + ticket.telefon + "</td><td>" + ticket.epost + "</td></tr>";
     }
     output += "</table>";
     $("#ticketsContainer").html(output);
