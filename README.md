@@ -2,7 +2,7 @@ OsloMet brukernavn: misom1551
 
 GitHub brukernavn: MikaelSommervold
 
-Github repo URL: https://github.com/MikaelSommervold/oblig2DATA1700.git
+Github repo URL: https://github.com/MikaelSommervold/oblig3DATA1700.git
 
 Fullt navn: Mikael Sommervold
 
