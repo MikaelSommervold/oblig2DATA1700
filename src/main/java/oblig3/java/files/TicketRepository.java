@@ -18,7 +18,7 @@ public class TicketRepository {
     private Logger logger = LoggerFactory.getLogger(TicketRepository.class);
 
     public boolean lagreBillett(Ticket ticket) {
-        String sql = "INSERT INTO Billetter(film, antall, fornavn, etternavn, telefon, epost) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Ticket(film, antall, fornavn, etternavn, telefon, epost) VALUES (?, ?, ?, ?, ?, ?)";
         try {
             db.update(sql, ticket.getFilm(), ticket.getAntall(), ticket.getFornavn(), ticket.getEtternavn(), ticket.getTelefon(), ticket.getEpost());
             return true;
